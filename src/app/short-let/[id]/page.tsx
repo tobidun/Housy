@@ -120,7 +120,7 @@ const PropertyDetailPage: React.FC<PropertyDetailPageProps> = ({ params }) => {
 
       <main className="pt-20">
         {/* Hero Image */}
-        <section className="relative h-90 md:h-[470px]">
+        <section className="relative h-96 sm:h-96 md:h-80 lg:h-[470px]">
           <Image
             src={property.mainImage}
             alt={property.title}
@@ -131,27 +131,27 @@ const PropertyDetailPage: React.FC<PropertyDetailPageProps> = ({ params }) => {
         </section>
 
         {/* Property Content */}
-        <section className="w-full  px-8 py-12">
-          <div className="flex flex-col lg:flex-row gap-12">
+        <section className="w-full px-4 sm:px-8 py-8 sm:py-12">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Left Content */}
             <div className="flex-1">
               {/* Title and Location */}
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <h1
-                  className={`text-[36px] font-bold text-gray-900 mb-1 ${playfair.className}`}
+                  className={`text-[28px] sm:text-[36px] font-bold text-gray-900 mb-1 ${playfair.className}`}
                 >
                   {property.title}
                 </h1>
                 <div className="flex items-center text-gray-600">
                   <MapPin className="h-4 w-4 mr-2" />
-                  <span className="text-[16px] text-[#6a7181]">
+                  <span className="text-[14px] sm:text-[16px] text-[#6a7181]">
                     {property.location}
                   </span>
                 </div>
               </div>
 
               {/* Property Details Cards */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-6 sm:mb-8">
                 <div className="bg-[#F6F5F4] rounded-lg p-3 text-center shadow-sm">
                   <Bed className="h-5 w-5 text-[#C0581B] mx-auto mb-1.5" />
                   <p className="text-[13px] font-normal text-[#6a7181]">
@@ -182,30 +182,30 @@ const PropertyDetailPage: React.FC<PropertyDetailPageProps> = ({ params }) => {
               </div>
 
               {/* Description */}
-              <div className="mb-12">
+              <div className="mb-8 sm:mb-12">
                 <h2
-                  className={`${playfair.className} text-[20px] font-bold text-gray-900 mb-4`}
+                  className={`${playfair.className} text-[18px] sm:text-[20px] font-bold text-gray-900 mb-4`}
                 >
                   About
                 </h2>
-                <p className="text-[16px] text-[#6a7181] leading-relaxed">
+                <p className="text-[14px] sm:text-[16px] text-[#6a7181] leading-relaxed">
                   {property.description}
                 </p>
               </div>
 
               {/* Amenities */}
-              <div className="mb-12">
+              <div className="mb-8 sm:mb-12">
                 <h2
-                  className={`${playfair.className} text-[20px] font-bold text-gray-900 mb-4`}
+                  className={`${playfair.className} text-[18px] sm:text-[20px] font-bold text-gray-900 mb-4`}
                 >
                   {" "}
                   Amenities
                 </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                   {property.amenities.map((amenity: any, index: any) => (
                     <div key={index} className="flex items-center">
                       <Check className="w-4 h-4 text-[#C0581B] mr-3" />
-                      <span className="text-[14px] text-[#6a7181]">
+                      <span className="text-[12px] sm:text-[14px] text-[#6a7181]">
                         {amenity}
                       </span>
                     </div>
@@ -216,16 +216,16 @@ const PropertyDetailPage: React.FC<PropertyDetailPageProps> = ({ params }) => {
 
             {/* Sticky Summary Card */}
             <div className="lg:w-[420px]">
-              <div className="bg-[#FBFAF9] border border-[#E5E7EB] rounded-lg shadow-sm p-6 lg:sticky lg:top-24">
+              <div className="bg-[#FBFAF9] border border-[#E5E7EB] rounded-lg shadow-sm p-4 sm:p-6 lg:sticky lg:top-24">
                 {/* Price */}
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-6">
                   <div className="flex items-baseline gap-2">
                     <p
-                      className={`${playfair.className} text-[30px] font-bold text-gray-900`}
+                      className={`${playfair.className} text-[24px] sm:text-[30px] font-bold text-gray-900`}
                     >
                       {property.price}
                     </p>
-                    <p className="text-[14px] text-[#6a7181] mr-6">
+                    <p className="text-[12px] sm:text-[14px] text-[#6a7181] mr-4 sm:mr-6">
                       {property.priceUnit}
                     </p>
                   </div>
@@ -236,7 +236,7 @@ const PropertyDetailPage: React.FC<PropertyDetailPageProps> = ({ params }) => {
                   <button
                     type="button"
                     onClick={() => setIsReservationModalOpen(true)}
-                    className="w-full text-[14px] bg-[#C0581B] hover:bg-[#a84615] text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                    className="w-full text-[12px] sm:text-[14px] bg-[#C0581B] hover:bg-[#a84615] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                   >
                     <CalendarDays className="h-4 w-4 mr-2" />
                     Reserve Now
@@ -244,7 +244,7 @@ const PropertyDetailPage: React.FC<PropertyDetailPageProps> = ({ params }) => {
                   <button
                     type="button"
                     onClick={() => setIsInspectionModalOpen(true)}
-                    className="w-full border text-[14px] border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                    className="w-full border text-[12px] sm:text-[14px] border-gray-300 text-gray-700 hover:bg-gray-50 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                   >
                     <Eye className="h-4 w-4 mr-2" />
                     Schedule Inspection
@@ -252,12 +252,12 @@ const PropertyDetailPage: React.FC<PropertyDetailPageProps> = ({ params }) => {
                 </div>
 
                 {/* Additional Info */}
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
+                <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200">
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600 mb-2">
                     <span>Check-in</span>
                     <span className="font-medium">3:00 PM</span>
                   </div>
-                  <div className="flex items-center justify-between text-sm text-gray-600">
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600">
                     <span>Check-out</span>
                     <span className="font-medium">11:00 AM</span>
                   </div>

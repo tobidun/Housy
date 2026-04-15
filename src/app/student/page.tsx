@@ -3,6 +3,13 @@ import { Header } from "@/components/Header";
 import PropertyCard from "@/components/PropertyCard";
 import Footer from "@/components/Footer";
 import { playfair } from "@/lib/fonts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Student Apartments - Housy",
+  description:
+    "Find affordable student apartments near campus. Budget-friendly housing with study spaces and student-friendly amenities.",
+};
 
 const StudentPage: React.FC = () => {
   const properties = [
@@ -28,18 +35,18 @@ const StudentPage: React.FC = () => {
 
       <main className="pt-12">
         {/* Page Header */}
-        <section className="bg-white py-16">
-          <div className="w-full px-8">
+        <section className="bg-white py-12 sm:py-16">
+          <div className="w-full px-4 sm:px-8">
             <div className="text-left">
-              <p className="text-[14px] font-semibold text-[#C0581B] tracking-wider">
+              <p className="text-[12px] sm:text-[14px] font-semibold text-[#C0581B] tracking-wider">
                 STUDY & LIVE COMFORTABLY
               </p>
               <h1
-                className={`${playfair.className} text-[48px] font-bold text-gray-900 mb-2`}
+                className={`${playfair.className} text-[36px] sm:text-[48px] font-bold text-gray-900 mb-2`}
               >
                 Student Accommodation
               </h1>
-              <p className="text-[#6a7181] text-[18px] max-w-2xl">
+              <p className="text-[#6a7181] text-[16px] sm:text-[18px] max-w-2xl">
                 Safe, affordable housing near universities with study-friendly
                 environments and amenities designed for student success.
               </p>
@@ -48,9 +55,9 @@ const StudentPage: React.FC = () => {
         </section>
 
         {/* Properties Grid */}
-        <section className="-mt-4 pb-16">
-          <div className="w-full px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="-mt-4 pb-12 sm:pb-16">
+          <div className="w-full px-4 sm:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
               {properties.map((property) => (
                 <PropertyCard
                   key={property.id}

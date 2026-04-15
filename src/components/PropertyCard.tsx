@@ -24,7 +24,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
     <a href={`/${category}/${id}`} className="block">
       <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
         {/* Image with Price Overlay */}
-        <div className="relative h-80 overflow-hidden">
+        <div className="relative h-72 sm:h-80 overflow-hidden">
           <Image
             src={image}
             alt={title}
@@ -38,9 +38,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         </div>
 
         {/* Content */}
-        <div className="p-6 bg-[#FBFAF9]">
+        <div className="p-4 sm:p-6 bg-[#FBFAF9]">
           <h3
-            className={`text-[18px] font-semibold text-gray-900 mb-2 ${playfair.className}`}
+            className={`text-[16px] sm:text-[18px] font-semibold text-gray-900 mb-2 ${playfair.className}`}
           >
             {title}
           </h3>
@@ -48,24 +48,24 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             <MapPin className="h-4 w-4 mr-2 text-[#C0581B]" />
             {location}
           </p>
-          <p className="text-[#6a7181] text-sm mb-4 leading-relaxed">
+          <p className="text-[#6a7181] text-sm mb-4 leading-relaxed ">
             An exquisitely furnished one-bedroom suite with modern amenities and
             stunning city views.
           </p>
 
           {/* Amenities */}
-          <div className="flex items-center  pt-4 border-t border-gray-200 gap-4">
+          <div className="flex items-center justify-between pt-4 border-t border-gray-200 gap-2 sm:gap-4">
             <div className="flex items-center text-gray-600">
-              <Bed className="h-4 w-4 mr-2" />
-              <span className="text-sm">2 Beds</span>
+              <Bed className="h-4 w-4 mr-1 sm:mr-2" />
+              <span className="text-xs sm:text-sm">2 Beds</span>
             </div>
             <div className="flex items-center text-gray-600">
-              <Bath className="h-4 w-4 mr-2" />
-              <span className="text-sm">1 Bath</span>
+              <Bath className="h-4 w-4 mr-1 sm:mr-2" />
+              <span className="text-xs sm:text-sm">1 Bath</span>
             </div>
             <div className="flex items-center text-gray-600">
-              <Users className="h-4 w-4 mr-2" />
-              <span className="text-sm">2 Guests</span>
+              <Users className="h-4 w-4 mr-1 sm:mr-2" />
+              <span className="text-xs sm:text-sm">2 Guests</span>
             </div>
           </div>
         </div>

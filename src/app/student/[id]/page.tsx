@@ -94,7 +94,7 @@ const StudentDetailPage: React.FC<PropertyDetailPageProps> = ({ params }) => {
 
       <main className="pt-20">
         {/* Hero Image */}
-        <section className="relative h-90 md:h-[470px]">
+        <section className="relative h-96 sm:h-96 md:h-80 lg:h-[470px]">
           <Image
             src={property.mainImage}
             alt={property.title}
