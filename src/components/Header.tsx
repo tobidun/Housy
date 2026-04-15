@@ -29,8 +29,8 @@ export const Header: React.FC = () => {
             : "bg-white shadow-sm border-b"
         }`}
       >
-        <div className="w-full px-4 sm:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-14 sm:h-16">
             <div className="flex items-center">
               <span className={`text-xl font-bold ${playfair.className}`}>
                 <span className="text-gray-900">Ho</span>
